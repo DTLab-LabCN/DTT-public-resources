@@ -11,14 +11,13 @@ Create a new workspace
 
 Import the following environments:
 
-- [local]()
-- [dev]()
+- [local](https://raw.githubusercontent.com/IDLab-org/DTT-public-resources/main/postman/Local.postman_environment.json)
 
 Import the following collections
 
-- [workspaces]()
-- [backchannels]()
-- [test-harness]()
+- [workspaces](https://raw.githubusercontent.com/IDLab-org/DTT-public-resources/main/postman/01-Workspaces.postman_collection.json)
+- [backchannels](https://raw.githubusercontent.com/IDLab-org/DTT-public-resources/main/postman/02-Backchannels.postman_collection.json)
+- [test-harness](https://raw.githubusercontent.com/IDLab-org/DTT-public-resources/main/postman/03-Test-harness.postman_collection.json)
 
 
 ## DOCKER

@@ -45,9 +45,9 @@ Pre-requisites:
 - `tmux` installed and be 
 - connected to the vpn.
 - `kdtt-dev` alias for your dtt-dev k8s admin file.
-    `alias kdtt-dev="export KUBECONFIG=~/.kube/dtt-dev.conf"`
+    - `alias kdtt-dev="export KUBECONFIG=~/.kube/dtt-dev.conf"`
 - clone the frontend/backend
-    Your tree should look like this:
+    - Your tree should look like this:
     ```
     ├──DTT/
         ├──DTT-public-repo/

@@ -48,12 +48,12 @@ Pre-requisites:
     - `alias kdtt-dev="export KUBECONFIG=~/.kube/dtt-dev.conf"`
 - clone the frontend/backend
     - Your tree should look like this:
-    ```
-    ├──DTT/
-        ├──DTT-public-repo/
-        ├──DTT-Backend/
-        ├──DTT-Frontend/
-    ```
+        ```
+        ├──DTT/
+            ├──DTT-public-repo/
+            ├──DTT-Backend/
+            ├──DTT-Frontend/
+        ```
 
 Then run this script:
 ```
@@ -61,7 +61,7 @@ Then run this script:
 ```
 
 If you have an application blocking these ports, use this command with caution, it will kill whatever process is running on the port.
-Useful if you loose a tmux shell.
+Useful if you lost a tmux shell.
 ```
 fuser -k 5000/tcp
 fuser -k 8000/tcp

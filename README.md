@@ -41,8 +41,21 @@ Use these values in your local `.env` configurations
 
 Quickly get the frontend backend up with our utility script
 
-You must have `tmux` installed and be connected to the vpn.
+Pre-requisites:
+- `tmux` installed and be 
+- connected to the vpn.
+- `kdtt-dev` alias for your dtt-dev k8s admin file.
+    `alias kdtt-dev="export KUBECONFIG=~/.kube/dtt-dev.conf"`
+- clone the frontend/backend
+    Your tree should look like this:
+    ```
+    ├──DTT/
+        ├──DTT-public-repo/
+        ├──DTT-Backend/
+        ├──DTT-Frontend/
+    ```
 
+Then run this script:
 ```
 ./start.sh
 ```

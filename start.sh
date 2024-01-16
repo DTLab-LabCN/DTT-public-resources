@@ -16,14 +16,14 @@ tmux new-session -d -s dtt
 
 # tmux split-window -v
 tmux rename-window 'Frontend'
-tmux send-keys 'cd DTT-Frontend && \
+tmux send-keys 'cd ../DTT-Frontend && \
                 . venv/bin/activate && \
                 python start.py' 'C-m'
 
 tmux split-window -h
 tmux rename-window 'Backend'
 tmux send-keys 'kdtt-dev && \
-                cd DTT-Backend && \
+                cd ../DTT-Backend && \
                 . venv/bin/activate && \
                 python main.py' 'C-m'
 

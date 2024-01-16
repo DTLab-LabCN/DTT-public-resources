@@ -4,8 +4,7 @@ Public resources for DTT development
 
 ## POSTMAN
 
-Download the postman desktop client
-https://www.postman.com/downloads/
+Download the postman [desktop client](https://www.postman.com/downloads/)
 
 Create a new workspace
 
@@ -30,15 +29,19 @@ Run the provided docker-compose file to get these up and running:
 docker-compose up -d
 ```
 
-You will have postgres (localhost:5432), redis (localhost:6379) and pgadmin (localhost:15433) instances available.
-Use these values in your local .env configurations
+This will run the services on your localhost accessible at the following ports:
+- postgres `5432`
+- redis `6379`
+- pgadmin `15433`
+
+Use these values in your local `.env` configurations
 
 
 ## Startup script
 
 Quickly get the frontend backend up with our utility script
 
-You must have tmux installed and be connected to the vpn.
+You must have `tmux` installed and be connected to the vpn.
 
 ```
 ./start.sh
@@ -50,3 +53,5 @@ Useful if you loose a tmux shell.
 fuser -k 5000/tcp
 fuser -k 8000/tcp
 ```
+
+Here's a [tmux man page](https://www.man7.org/linux/man-pages/man1/tmux.1.html)

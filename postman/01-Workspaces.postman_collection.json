@@ -1,0 +1,114 @@
+{
+	"info": {
+		"_postman_id": "6121e312-ae99-4c7a-abb7-3a02d5b07e23",
+		"name": "01-Workspaces",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24993385",
+		"_collection_link": "https://winter-moon-762211.postman.co/workspace/DTT-Backend~c33f9e65-0ee2-4542-97c1-067d7c2a49e2/collection/24993385-6121e312-ae99-4c7a-abb7-3a02d5b07e23?action=share&source=collection_link&creator=24993385"
+	},
+	"item": [
+		{
+			"name": "Create workspace",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"let response = pm.response.json()\r",
+							"\r",
+							"pm.globals.set(\"workspaceId\", response.workspace_id);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"label\": \"{{WORKSPACE_LABEL}}\",\r\n  \"type\": \"private\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{API_BASE_URL}}/workspaces",
+					"host": [
+						"{{API_BASE_URL}}"
+					],
+					"path": [
+						"workspaces"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get workspace info",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{API_BASE_URL}}/workspaces/{{workspaceId}}",
+					"host": [
+						"{{API_BASE_URL}}"
+					],
+					"path": [
+						"workspaces",
+						"{{workspaceId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete workspace",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{API_BASE_URL}}/workspaces/{{workspaceId}}",
+					"host": [
+						"{{API_BASE_URL}}"
+					],
+					"path": [
+						"workspaces",
+						"{{workspaceId}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "workspaceId",
+			"value": ""
+		}
+	]
+}

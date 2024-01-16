@@ -1,0 +1,259 @@
+{
+	"info": {
+		"_postman_id": "9dea9fff-b6c4-47e5-9438-0b4470f70a87",
+		"name": "03-Test-harness",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24993385",
+		"_collection_link": "https://winter-moon-762211.postman.co/workspace/DTT-Backend~c33f9e65-0ee2-4542-97c1-067d7c2a49e2/collection/24993385-9dea9fff-b6c4-47e5-9438-0b4470f70a87?action=share&source=collection_link&creator=24993385"
+	},
+	"item": [
+		{
+			"name": "Get instances",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{API_BASE_URL}}/workspaces/{{workspaceId}}/test-harness",
+					"host": [
+						"{{API_BASE_URL}}"
+					],
+					"path": [
+						"workspaces",
+						"{{workspaceId}}",
+						"test-harness"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Configure instance",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"let response = pm.response.json()\r",
+							"\r",
+							"pm.globals.set(\"instanceId\", response.instance_id);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"tests\": [\r\n    \"connection\"\r\n  ],\r\n  \"backchannel\": \"{{BACKCHANNEL_FRAMEWORK}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{API_BASE_URL}}/workspaces/{{workspaceId}}/test-harness",
+					"host": [
+						"{{API_BASE_URL}}"
+					],
+					"path": [
+						"workspaces",
+						"{{workspaceId}}",
+						"test-harness"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get instance preview",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{API_BASE_URL}}/workspaces/{{workspaceId}}/test-harness/{{instanceId}}/preview",
+					"host": [
+						"{{API_BASE_URL}}"
+					],
+					"path": [
+						"workspaces",
+						"{{workspaceId}}",
+						"test-harness",
+						"{{instanceId}}",
+						"preview"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Run instance",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{API_BASE_URL}}/workspaces/{{workspaceId}}/test-harness/{{instanceId}}",
+					"host": [
+						"{{API_BASE_URL}}"
+					],
+					"path": [
+						"workspaces",
+						"{{workspaceId}}",
+						"test-harness",
+						"{{instanceId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get instance current step",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{API_BASE_URL}}/workspaces/{{workspaceId}}/test-harness/{{instanceId}}",
+					"host": [
+						"{{API_BASE_URL}}"
+					],
+					"path": [
+						"workspaces",
+						"{{workspaceId}}",
+						"test-harness",
+						"{{instanceId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get instance results",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{API_BASE_URL}}/workspaces/{{workspaceId}}/test-harness/{{instanceId}}/results",
+					"host": [
+						"{{API_BASE_URL}}"
+					],
+					"path": [
+						"workspaces",
+						"{{workspaceId}}",
+						"test-harness",
+						"{{instanceId}}",
+						"results"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete instance and ressources",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{API_BASE_URL}}/workspaces/{{workspaceId}}/test-harness/{{instanceId}}",
+					"host": [
+						"{{API_BASE_URL}}"
+					],
+					"path": [
+						"workspaces",
+						"{{workspaceId}}",
+						"test-harness",
+						"{{instanceId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete instance and ressources Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{API_BASE_URL}}/workspaces/{{workspaceId}}/test-harness/09c6",
+					"host": [
+						"{{API_BASE_URL}}"
+					],
+					"path": [
+						"workspaces",
+						"{{workspaceId}}",
+						"test-harness",
+						"09c6"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
